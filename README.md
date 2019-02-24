@@ -33,12 +33,22 @@ Is developed with the IDE [Apache Netbeans 10](https://netbeans.apache.org/downl
 
 For the configuration we will take as an example the puzzle solution
 
+Problem:
+
 |   5   |   1   |   3   |
 | :---: | :---: | :---: |
 |   7   |   6   |   4   |
 |   8   |   0   |   2   |
 
-We know that the board is a square of 3x3 so we already have the width, now we transform the matrix to a vector which will be the following: `[5,1,3,7,6,4,8,0,2]`.
+Solution:
+
+|   0   |   1   |   2   |
+| :---: | :---: | :---: |
+|   3   |   4   |   5   |
+|   6   |   7   |   8   |
+
+
+To find the solution we know that the board is a square of 3x3, so we already have the width, now we transform the matrix into a vector: `[5,1,3,7,6,4,8,0,2]`.
 
 The vector is of length: `9`.
 
