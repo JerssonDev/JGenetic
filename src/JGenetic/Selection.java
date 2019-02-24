@@ -139,7 +139,7 @@ public class Selection {
         communityDeterministicTemp.addAll(Arrays.asList(cromosomaParentsTemp));
             
         communityDeterministicTemp.forEach((c) -> {
-            System.out.println("*-* Participate in the search for the best Aptitude ( " + c.getAptitude() + " ) -> " + Arrays.toString(c.getVectorCromosoma()));
+            System.out.println("*-* Participate in the search for the best Aptitude ( " + c.getAptitude() + " ) -> " + Arrays.toString(c.getChromosomeVector()));
         });
         
         for (int i = 0; i < Config.getWidthParents(); i++) {
@@ -155,7 +155,7 @@ public class Selection {
                 }
             }
             
-            System.out.println(" ✔️ Selecter for Parents " + i + " Aptitude ( " + communityDeterministicTemp.get(menorConflicPos[i]).getAptitude()+ " ) -> " + Arrays.toString(communityDeterministicTemp.get(menorConflicPos[i]).getVectorCromosoma()));
+            System.out.println(" ✔️ Selecter for Parents " + i + " Aptitude ( " + communityDeterministicTemp.get(menorConflicPos[i]).getAptitude()+ " ) -> " + Arrays.toString(communityDeterministicTemp.get(menorConflicPos[i]).getChromosomeVector()));
             
             cromosomaParentsSelected[i] = communityDeterministicTemp.get(menorConflicPos[i]);            
             communityDeterministicTemp.remove(menorConflicPos[i]);
@@ -169,7 +169,7 @@ public class Selection {
         Config.getCommunity().addAll(communityDeterministicTemp);
         
         communityDeterministicTemp.forEach((c) -> {
-            System.out.println("++ Re-Enter ( " + c.getAptitude() + " ) -> " + Arrays.toString(c.getVectorCromosoma()));
+            System.out.println("++ Re-Enter ( " + c.getAptitude() + " ) -> " + Arrays.toString(c.getChromosomeVector()));
         });
         
         System.out.println("------------------------------------------------------------------------------------------------------------------------------");

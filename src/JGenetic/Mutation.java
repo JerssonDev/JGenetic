@@ -38,15 +38,15 @@ public class Mutation {
             
             pointInvert = resources.getRandom(min, max);
             
-            valueTemp = cromosomaChild.getValueVectorCromosoma(pointInvert);
+            valueTemp = cromosomaChild.getValueChromosomeVector(pointInvert);
             
             value = resources.getExclusiveRandom(minInvertGenes, maxInvertGenes,valueTemp);
             
-            cromosomaChild.setValueVectorCromosoma(pointInvert, value);
+            cromosomaChild.setValueChromosomeVector(pointInvert, value);
         }
         
         for (int i = 0; i < cromosomaChildren.length; i++) {
-            System.out.println("Mutation in Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getVectorCromosoma()));
+            System.out.println("Mutation in Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getChromosomeVector()));
         }
         System.out.println("------------------------------------------------------------------------------------------------------------------------------");
         
@@ -64,15 +64,15 @@ public class Mutation {
             exchangePoint1 = resources.getRandom(min, max);
             exchangePoint2 = resources.getExclusiveRandom(min, max, exchangePoint1);
             
-            exchangeValue1 = cromosomaChild.getValueVectorCromosoma(exchangePoint1);
-            exchangeValue2 = cromosomaChild.getValueVectorCromosoma(exchangePoint2);
+            exchangeValue1 = cromosomaChild.getValueChromosomeVector(exchangePoint1);
+            exchangeValue2 = cromosomaChild.getValueChromosomeVector(exchangePoint2);
             
-            cromosomaChild.setValueVectorCromosoma(exchangePoint1, exchangeValue2);
-            cromosomaChild.setValueVectorCromosoma(exchangePoint2, exchangeValue1);
+            cromosomaChild.setValueChromosomeVector(exchangePoint1, exchangeValue2);
+            cromosomaChild.setValueChromosomeVector(exchangePoint2, exchangeValue1);
         }
         
         for (int i = 0; i < cromosomaChildren.length; i++) {
-            System.out.println("Mutation in Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getVectorCromosoma()));
+            System.out.println("Mutation in Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getChromosomeVector()));
         }
         System.out.println("------------------------------------------------------------------------------------------------------------------------------");
 
@@ -91,24 +91,24 @@ public class Mutation {
             for (int j = 0; j < numModifications; j++) {
                 
                 exchangePoint = resources.getRandom(min, max);
-                exchangeValue = cromosomaChild.getValueVectorCromosoma(exchangePoint);
+                exchangeValue = cromosomaChild.getValueChromosomeVector(exchangePoint);
                 
                 if (exchangeValue % 2 == 0) {
                     
                     newValue = exchangeValue + sumGen;
-                    cromosomaChild.setValueVectorCromosoma(exchangePoint, newValue);
+                    cromosomaChild.setValueChromosomeVector(exchangePoint, newValue);
                     
                 } else {
                     
                     newValue = exchangeValue + resGen;
-                    cromosomaChild.setValueVectorCromosoma(exchangePoint, newValue);
+                    cromosomaChild.setValueChromosomeVector(exchangePoint, newValue);
                     
                 }
             }
         }
 
         for (int i = 0; i < cromosomaChildren.length; i++) {
-            System.out.println("Mutation in Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getVectorCromosoma()));
+            System.out.println("Mutation in Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getChromosomeVector()));
         }
         System.out.println("------------------------------------------------------------------------------------------------------------------------------");
 

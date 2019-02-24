@@ -11,34 +11,34 @@ package JGenetic;
  */
 public class Chromosome {
 
-    private int [] VectorCromosoma; 
+    private int [] chromosomeVector; 
     private int aptitude;
     private boolean selected;
     private boolean solution;
     
     public Chromosome () {
     
-        this.VectorCromosoma = new int [Config.getWidthVector()];
+        this.chromosomeVector = new int [Config.getWidthVector()];
         this.aptitude = 0;
         this.selected = false;
         this.solution = false;
 
     }
 
-    public int[] getVectorCromosoma() {
-        return VectorCromosoma;
+    public int[] getChromosomeVector() {
+        return chromosomeVector;
     }
 
-    public void setVectorCromosoma(int[] VectorCromosoma) {
-        this.VectorCromosoma = VectorCromosoma;
+    public void setChromosomeVector(int[] chromosomeVector) {
+        this.chromosomeVector = chromosomeVector;
     }
     
-    public int getValueVectorCromosoma(int indice) {
-        return this.VectorCromosoma[indice];
+    public int getValueChromosomeVector(int indice) {
+        return this.chromosomeVector[indice];
     }
 
-    public void setValueVectorCromosoma(int indice, int valor) {
-        this.VectorCromosoma[indice] = valor;
+    public void setValueChromosomeVector(int indice, int value) {
+        this.chromosomeVector[indice] = value;
     }
 
     public int getAptitude() {

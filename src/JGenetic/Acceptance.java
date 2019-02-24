@@ -46,14 +46,14 @@ public class Acceptance {
                     mayConflicPos[i] = Config.getCommunity().indexOf(cromosomaTemp);
                 }
             }
-            System.out.println("Parents eliminate in the position " + mayConflicPos[i] + " conflic (" + Config.getCommunity().get(mayConflicPos[i]).getAptitude()+ ")" + " - > " + Arrays.toString(Config.getCommunity().get(mayConflicPos[i]).getVectorCromosoma()));
+            System.out.println("Parents eliminate in the position " + mayConflicPos[i] + " conflic (" + Config.getCommunity().get(mayConflicPos[i]).getAptitude()+ ")" + " - > " + Arrays.toString(Config.getCommunity().get(mayConflicPos[i]).getChromosomeVector()));
             Config.getCommunity().remove(mayConflicPos[i]);
         }
         
         Config.getCommunity().addAll(Arrays.asList(cromosomaChildren));    
 
         for (int i = 0; i < cromosomaChildren.length; i++) {
-            System.out.println("Acceptance Chield "+i+" : " + Arrays.toString(cromosomaChildren[i].getVectorCromosoma()));
+            System.out.println("Acceptance Chield "+i+" : " + Arrays.toString(cromosomaChildren[i].getChromosomeVector()));
         }
         System.out.println("------------------------------------------------------------------------------------------------------------------------------");
         
@@ -89,11 +89,11 @@ public class Acceptance {
         }
         
         for (int i = 0; i < cromosomaParentsTemp.length; i++) {
-            System.out.println("Parent " + mayConflicPos[i] + " Aptitude ( " + cromosomaParentsTemp[i].getAptitude()+ " ) -> " + Arrays.toString(cromosomaParentsTemp[i].getVectorCromosoma()));
+            System.out.println("Parent " + mayConflicPos[i] + " Aptitude ( " + cromosomaParentsTemp[i].getAptitude()+ " ) -> " + Arrays.toString(cromosomaParentsTemp[i].getChromosomeVector()));
         }
         
         for (int i = 0; i < cromosomaChildren.length; i++) {
-            System.out.println("Child " + i +"  Aptitude ( " + cromosomaChildren[i].getAptitude()+ " ) -> " + Arrays.toString(cromosomaChildren[i].getVectorCromosoma()));
+            System.out.println("Child " + i +"  Aptitude ( " + cromosomaChildren[i].getAptitude()+ " ) -> " + Arrays.toString(cromosomaChildren[i].getChromosomeVector()));
         }
         
         
@@ -103,7 +103,7 @@ public class Acceptance {
         }
         
         communityImprovementTemp.forEach((c) -> {
-            System.out.println("*-* Participate in the search for the best Aptitude ( " + c.getAptitude() + " ) -> " + Arrays.toString(c.getVectorCromosoma()));
+            System.out.println("*-* Participate in the search for the best Aptitude ( " + c.getAptitude() + " ) -> " + Arrays.toString(c.getChromosomeVector()));
         });
         
         for (int i = 0; i < cromosomaChildren.length; i++) {
@@ -118,7 +118,7 @@ public class Acceptance {
                     menorConflicPos[i] = communityImprovementTemp.indexOf(cromosoma);
                 }
             }
-            System.out.println(" ✔️ Go to the next generation the best person " + i + " Aptitude ( " + communityImprovementTemp.get(menorConflicPos[i]).getAptitude()+ " ) -> " + Arrays.toString(communityImprovementTemp.get(menorConflicPos[i]).getVectorCromosoma()));
+            System.out.println(" ✔️ Go to the next generation the best person " + i + " Aptitude ( " + communityImprovementTemp.get(menorConflicPos[i]).getAptitude()+ " ) -> " + Arrays.toString(communityImprovementTemp.get(menorConflicPos[i]).getChromosomeVector()));
             
             Config.getCommunity().add(communityImprovementTemp.get(menorConflicPos[i]));
             communityImprovementTemp.remove(menorConflicPos[i]);
@@ -149,11 +149,11 @@ public class Acceptance {
         }
         
         for (int i = 0; i < cromosomaParentsTemp.length; i++) {
-            System.out.println("Parent " + posParents[i] + " Aptitude ( " + cromosomaParentsTemp[i].getAptitude()+ " ) -> " + Arrays.toString(cromosomaParentsTemp[i].getVectorCromosoma()));
+            System.out.println("Parent " + posParents[i] + " Aptitude ( " + cromosomaParentsTemp[i].getAptitude()+ " ) -> " + Arrays.toString(cromosomaParentsTemp[i].getChromosomeVector()));
         }
         
         for (int i = 0; i < cromosomaChildren.length; i++) {
-            System.out.println("Child " + i +"  Aptitude ( " + cromosomaChildren[i].getAptitude()+ " ) -> " + Arrays.toString(cromosomaChildren[i].getVectorCromosoma()));
+            System.out.println("Child " + i +"  Aptitude ( " + cromosomaChildren[i].getAptitude()+ " ) -> " + Arrays.toString(cromosomaChildren[i].getChromosomeVector()));
         }
         
         
@@ -161,7 +161,7 @@ public class Acceptance {
         communityImprovementTemp.addAll(Arrays.asList(cromosomaParentsTemp));
         
         communityImprovementTemp.forEach((c) -> {
-            System.out.println("*-* Participate in the search for the best Aptitude ( " + c.getAptitude() + " ) -> " + Arrays.toString(c.getVectorCromosoma()));
+            System.out.println("*-* Participate in the search for the best Aptitude ( " + c.getAptitude() + " ) -> " + Arrays.toString(c.getChromosomeVector()));
         });
         
         for (int i = 0; i < cromosomaChildren.length; i++) {
@@ -176,7 +176,7 @@ public class Acceptance {
                     menorConflicPos[i] = communityImprovementTemp.indexOf(cromosoma);
                 }
             }
-            System.out.println(" ✔️ Go to the next generation the best person " + i + " Aptitude ( " + communityImprovementTemp.get(menorConflicPos[i]).getAptitude()+ " ) -> " + Arrays.toString(communityImprovementTemp.get(menorConflicPos[i]).getVectorCromosoma()));
+            System.out.println(" ✔️ Go to the next generation the best person " + i + " Aptitude ( " + communityImprovementTemp.get(menorConflicPos[i]).getAptitude()+ " ) -> " + Arrays.toString(communityImprovementTemp.get(menorConflicPos[i]).getChromosomeVector()));
             
             Config.getCommunity().add(communityImprovementTemp.get(menorConflicPos[i]));
             communityImprovementTemp.remove(menorConflicPos[i]);
@@ -210,11 +210,11 @@ public class Acceptance {
         }
         
         for (int i = 0; i < parentsRandomTemp.length; i++) {
-            System.out.println("Parent " + parentsRandomPos[i] + " Aptitude ( " + parentsRandomTemp[i].getAptitude()+ " ) -> " + Arrays.toString(parentsRandomTemp[i].getVectorCromosoma()));
+            System.out.println("Parent " + parentsRandomPos[i] + " Aptitude ( " + parentsRandomTemp[i].getAptitude()+ " ) -> " + Arrays.toString(parentsRandomTemp[i].getChromosomeVector()));
         }
         
         for (int i = 0; i < cromosomaChildren.length; i++) {
-            System.out.println("Child " + i +"  Aptitude ( " + cromosomaChildren[i].getAptitude()+ " ) -> " + Arrays.toString(cromosomaChildren[i].getVectorCromosoma()));
+            System.out.println("Child " + i +"  Aptitude ( " + cromosomaChildren[i].getAptitude()+ " ) -> " + Arrays.toString(cromosomaChildren[i].getChromosomeVector()));
         }
         
         communityTournamentTemp.addAll(Arrays.asList(parentsRandomTemp));
@@ -222,7 +222,7 @@ public class Acceptance {
         communityTournamentTemp.addAll(Arrays.asList(cromosomaChildren));
         
         communityTournamentTemp.forEach((c) -> {
-            System.out.println("*-* Participate in the search for the best Aptitude ( " + c.getAptitude() + " ) -> " + Arrays.toString(c.getVectorCromosoma()));
+            System.out.println("*-* Participate in the search for the best Aptitude ( " + c.getAptitude() + " ) -> " + Arrays.toString(c.getChromosomeVector()));
         });
         
         for (int i = 0; i < numParticipants; i++) {
@@ -238,7 +238,7 @@ public class Acceptance {
                 }
             }
             
-            System.out.println(" ✔️ Go to the next generation the best person " + i + " Aptitude ( " + communityTournamentTemp.get(menorConflicPos[i]).getAptitude()+ " ) -> " + Arrays.toString(communityTournamentTemp.get(menorConflicPos[i]).getVectorCromosoma()));
+            System.out.println(" ✔️ Go to the next generation the best person " + i + " Aptitude ( " + communityTournamentTemp.get(menorConflicPos[i]).getAptitude()+ " ) -> " + Arrays.toString(communityTournamentTemp.get(menorConflicPos[i]).getChromosomeVector()));
             
             Config.getCommunity().add(communityTournamentTemp.get(menorConflicPos[i]));            
             communityTournamentTemp.remove(menorConflicPos[i]);

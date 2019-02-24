@@ -46,19 +46,19 @@ public class Crossover {
 
             for (int j = 0; j < Config.getWidthVector(); j++) {
                 if (j <= pointCrossover) {
-                    cromosomaChildren[i].setValueVectorCromosoma(j, parent1.getValueVectorCromosoma(j));
+                    cromosomaChildren[i].setValueChromosomeVector(j, parent1.getValueChromosomeVector(j));
                 } else {
-                    cromosomaChildren[i].setValueVectorCromosoma(j, parent2.getValueVectorCromosoma(j));
+                    cromosomaChildren[i].setValueChromosomeVector(j, parent2.getValueChromosomeVector(j));
                 }
             }
        
         }
         
-        System.out.println("Parent 1 : " + Arrays.toString(parent1.getVectorCromosoma()));
-        System.out.println("Parent 2 : " + Arrays.toString(parent2.getVectorCromosoma())); 
+        System.out.println("Parent 1 : " + Arrays.toString(parent1.getChromosomeVector()));
+        System.out.println("Parent 2 : " + Arrays.toString(parent2.getChromosomeVector())); 
         
         for (int i = 0; i < cromosomaChildren.length; i++) {
-            System.out.println("Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getVectorCromosoma()));
+            System.out.println("Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getChromosomeVector()));
         }
         
         System.out.println("------------------------------------------------------------------------------------------------------------------------------");
@@ -96,21 +96,21 @@ public class Crossover {
             for (int j = 0; j < Config.getWidthVector(); j++) {
 
                 if (j <= point1) {
-                    cromosomaChildren[i].setValueVectorCromosoma(j, parent1.getValueVectorCromosoma(j));
+                    cromosomaChildren[i].setValueChromosomeVector(j, parent1.getValueChromosomeVector(j));
                 } else if (j >= point2) {
-                    cromosomaChildren[i].setValueVectorCromosoma(j, parent1.getValueVectorCromosoma(j));
+                    cromosomaChildren[i].setValueChromosomeVector(j, parent1.getValueChromosomeVector(j));
                 } else {
-                    cromosomaChildren[i].setValueVectorCromosoma(j, parent2.getValueVectorCromosoma(j));
+                    cromosomaChildren[i].setValueChromosomeVector(j, parent2.getValueChromosomeVector(j));
                 }
 
             } 
         }
         
-        System.out.println("Parent 1 : " + Arrays.toString(parent1.getVectorCromosoma()));
-        System.out.println("Parent 2 : " + Arrays.toString(parent2.getVectorCromosoma()));
+        System.out.println("Parent 1 : " + Arrays.toString(parent1.getChromosomeVector()));
+        System.out.println("Parent 2 : " + Arrays.toString(parent2.getChromosomeVector()));
         
         for (int i = 0; i < cromosomaChildren.length; i++) {
-            System.out.println("Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getVectorCromosoma()));
+            System.out.println("Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getChromosomeVector()));
         }
         
         System.out.println("------------------------------------------------------------------------------------------------------------------------------");
@@ -138,18 +138,18 @@ public class Crossover {
             for (int j = 0; j < Config.getWidthVector(); j++) {
 
                 if (j % 2 == 0) {
-                    cromosomaChildren[i].setValueVectorCromosoma(j, parent1.getValueVectorCromosoma(j));
+                    cromosomaChildren[i].setValueChromosomeVector(j, parent1.getValueChromosomeVector(j));
                 } else {
-                    cromosomaChildren[i].setValueVectorCromosoma(j, parent2.getValueVectorCromosoma(j));
+                    cromosomaChildren[i].setValueChromosomeVector(j, parent2.getValueChromosomeVector(j));
                 }
             }
         }
         
-        System.out.println("Parent 1 : " + Arrays.toString(parent1.getVectorCromosoma()));
-        System.out.println("Parent 2 : " + Arrays.toString(parent2.getVectorCromosoma()));
+        System.out.println("Parent 1 : " + Arrays.toString(parent1.getChromosomeVector()));
+        System.out.println("Parent 2 : " + Arrays.toString(parent2.getChromosomeVector()));
 
         for (int i = 0; i < cromosomaChildren.length; i++) {
-            System.out.println("Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getVectorCromosoma()));
+            System.out.println("Child "+i+" : " + Arrays.toString(cromosomaChildren[i].getChromosomeVector()));
         }
         
         System.out.println("------------------------------------------------------------------------------------------------------------------------------");

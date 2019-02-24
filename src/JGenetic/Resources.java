@@ -123,9 +123,9 @@ public class Resources {
     
         Config.getCommunity().stream().filter((c) -> (c.getAptitude()== 0)).forEach((c) -> {
             System.out.println("\t  --------------------");
-            System.out.println("\t | Cromosoma Solución |");
+            System.out.println("\t | Chromosome Solution |");
             System.out.println("\t  --------------------\n");   
-            System.out.println( "\t" + Arrays.toString(c.getVectorCromosoma()) + "\n");          
+            System.out.println( "\t" + Arrays.toString(c.getChromosomeVector()) + "\n");          
         });
         
     }
@@ -133,10 +133,10 @@ public class Resources {
     public void drawInfoFinal (int generation,int children) {
     
         System.out.println("  ---------------------------------------");
-        System.out.println(" | \t\t Resuelto \t\t |");    
-        System.out.println(" | \t Total de Generaciones = " + generation + " \t |");
-        System.out.println(" | \t Total de Hijos = " + children + " \t\t |");
-        System.out.println(" | \t Total de Población = " + Config.getCommunity().size() + " \t |");
+        System.out.println(" | \t\t Resolved \t\t |");    
+        System.out.println(" | \t Total de Generation = " + generation + " \t |");
+        System.out.println(" | \t Total de Children = " + children + " \t\t |");
+        System.out.println(" | \t Total de Community = " + Config.getCommunity().size() + " \t |");
         System.out.println("  ---------------------------------------\n");
         
     }
@@ -145,7 +145,7 @@ public class Resources {
 
         for (Chromosome c : Config.getCommunity()) {
             if (c.getAptitude() == 0) {
-                return c.getVectorCromosoma();
+                return c.getChromosomeVector();
             }
         }
         
